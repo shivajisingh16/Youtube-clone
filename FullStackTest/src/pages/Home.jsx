@@ -41,7 +41,7 @@ const Home = ({toggleSidebar,isSidebarVisible}) => {
   return (
     <div className='bg-black h-screen text-white'>
       <Header toggleSidebar={toggleSidebar}/>
-   <div className=' relative top-20'>
+   <div className=' relative top-20 z-0'>
    <div className='flex items-center justify-between px-4 py-2 w-[50%] mx-auto'>
         {
           filters.map((filter => (
@@ -52,10 +52,10 @@ const Home = ({toggleSidebar,isSidebarVisible}) => {
         }
         
       </div>
-      <div>
+      <div className='p-10'>
           {data.map((video) => (
-            <div key={video.videoId} className='flex flex-col items-center justify-center gap-4 mt-4'>
-              <img src={video.thumbnailURL} alt={video.title} className='w-full h-64 object-cover rounded-lg' />
+            <div key={video.videoId} className='flex flex-col items-center justify-center gap-4 mt-4 p-4 bg-gray-500 w-[300px] rounded-lg'>
+              <img src={video.thumbnailURL}  className='aspect-square bg-black h-64 object-cover rounded-lg' />
               <h2 className='text-xl font-bold'>{video.title}</h2>
               <p className='text-gray-400'>{video.description}</p>
               <p className='text-gray-500'>{video.views} views</p>

@@ -3,7 +3,7 @@ import React from 'react'
 const Sidebar = () => {
   return (
     <div>
-      <div className='bg-black h-screen overflow-scroll w-44 absolute text-white'>
+      <div className='bg-black h-screen overflow-scroll w-44 absolute z-[2] text-white'>
         <div className='flex flex-col gap-10 items-center justify-center h-full mt-[180px]'>
           <ul className='space-y-4'>
             <li className='text-xl font-semibold hover:bg-red-600 bg-gray-600 px-2 py-2 rounded-lg'>Home</li>
